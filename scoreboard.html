@@ -2,7 +2,10 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Siber Güvenlik Oyunu - Skor Tablosu</title>
     <style>
         @font-face {
@@ -473,6 +476,117 @@
             }
             .page-info {
                 font-size: 0.8rem;
+            }
+            
+            /* Mobil için skor tablosu optimizasyonu */
+            .scoreboard-row {
+                padding: 4px 8px !important;
+                font-size: 0.7rem !important;
+                margin-bottom: 2px !important;
+            }
+            
+            .scoreboard-rank {
+                flex: 0 0 45px !important;
+                font-size: 0.7rem !important;
+            }
+            
+            .scoreboard-name {
+                flex: 1 !important;
+                font-size: 0.7rem !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
+                white-space: nowrap !important;
+            }
+            
+            .scoreboard-score {
+                flex: 0 0 80px !important;
+                font-size: 0.7rem !important;
+            }
+            
+            .scoreboard-time {
+                flex: 0 0 60px !important;
+                font-size: 0.6rem !important;
+            }
+            
+            .scoreboard-date {
+                flex: 0 0 80px !important;
+                font-size: 0.6rem !important;
+            }
+        }
+        
+        /* 600px altı ekranlar için ek optimizasyonlar */
+        @media (max-width: 600px) {
+            .password-panel-outer {
+                width: 98vw;
+                height: 600px;
+            }
+            .password-panel-content {
+                padding: 15px 20px 50px 20px;
+                top: 70px;
+            }
+            .password-title {
+                font-size: 1rem;
+                margin-bottom: 4px;
+            }
+            .password-desc {
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+            }
+            .security-icon {
+                width: 40px !important;
+                height: 40px !important;
+                margin-bottom: 6px;
+            }
+            .last-update {
+                top: 120px;
+                left: 90px;
+                font-size: 0.8rem;
+            }
+            .refresh-btn, .clear-btn {
+                max-width: 70px;
+                bottom: 10px;
+            }
+            .clear-btn {
+                right: 200px;
+            }
+            .refresh-btn {
+                right: 110px;
+            }
+            
+            /* Mobil için geliştirilmiş skor tablosu */
+            .scoreboard-row {
+                padding: 5px 10px !important;
+                font-size: 0.75rem !important;
+                margin-bottom: 3px !important;
+                line-height: 1.2 !important;
+            }
+            
+            .scoreboard-rank {
+                flex: 0 0 50px !important;
+                font-size: 0.75rem !important;
+            }
+            
+            .scoreboard-name {
+                flex: 1 !important;
+                font-size: 0.75rem !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
+                white-space: nowrap !important;
+            }
+            
+            .scoreboard-score {
+                flex: 0 0 90px !important;
+                font-size: 0.75rem !important;
+            }
+            
+            .scoreboard-time {
+                flex: 0 0 70px !important;
+                font-size: 0.7rem !important;
+            }
+            
+            .scoreboard-date {
+                flex: 0 0 90px !important;
+                font-size: 0.65rem !important;
             }
         }
     </style>
