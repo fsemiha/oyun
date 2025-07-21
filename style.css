@@ -291,6 +291,33 @@ body, html {
         padding: 0 8px !important;
     }
     
+    /* USERNAME PANEL ÖZELLİKLERİ */
+    #username-panel .inside-panel {
+        gap: 8px !important;
+        padding: 0 10px !important;
+        width: 85% !important;
+    }
+    
+    #username-panel .panel-desc {
+        font-size: 0.75rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 8px !important;
+        padding: 0 5px !important;
+        text-align: center !important;
+    }
+    
+    #username-panel .input-svg-wrapper {
+        width: 90% !important;
+        max-width: 250px !important;
+        margin: 0 auto 8px auto !important;
+    }
+    
+    #username-panel .start-svg {
+        width: 90% !important;
+        max-width: 250px !important;
+        margin-top: 6px !important;
+    }
+    
     /* Parola paneli ayarları */
     .password-panel-outer {
         width: 98vw !important;
@@ -423,6 +450,33 @@ body, html {
         padding: 0 10px !important;
     }
     
+    /* USERNAME PANEL ÖZELLİKLERİ */
+    #username-panel .inside-panel {
+        gap: 10px !important;
+        padding: 0 12px !important;
+        width: 85% !important;
+    }
+    
+    #username-panel .panel-desc {
+        font-size: 0.85rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 10px !important;
+        padding: 0 8px !important;
+        text-align: center !important;
+    }
+    
+    #username-panel .input-svg-wrapper {
+        width: 85% !important;
+        max-width: 280px !important;
+        margin: 0 auto 10px auto !important;
+    }
+    
+    #username-panel .start-svg {
+        width: 85% !important;
+        max-width: 280px !important;
+        margin-top: 8px !important;
+    }
+    
     /* Parola paneli ayarları */
     .password-panel-outer {
         width: 95vw !important;
@@ -534,6 +588,33 @@ body, html {
         height: 45vw !important;
         min-height: 240px !important;
         max-height: 380px !important;
+    }
+    
+    /* USERNAME PANEL ÖZELLİKLERİ */
+    #username-panel .inside-panel {
+        gap: 12px !important;
+        padding: 0 15px !important;
+        width: 80% !important;
+    }
+    
+    #username-panel .panel-desc {
+        font-size: 1rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 12px !important;
+        padding: 0 10px !important;
+        text-align: center !important;
+    }
+    
+    #username-panel .input-svg-wrapper {
+        width: 75% !important;
+        max-width: 320px !important;
+        margin: 0 auto 12px auto !important;
+    }
+    
+    #username-panel .start-svg {
+        width: 75% !important;
+        max-width: 320px !important;
+        margin-top: 10px !important;
     }
     
     /* Parola paneli ayarları */
