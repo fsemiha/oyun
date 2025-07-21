@@ -6,6 +6,17 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a2844">
+    <meta name="apple-mobile-web-app-title" content="Siber Macera">
+    
+    <!-- App Icons -->
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+    
     <title>Siber Macera</title>
     <!-- Font preload for faster loading -->
     <link rel="preload" href="fonts/Gilmer Regular.otf" as="font" type="font/otf" crossorigin>
@@ -2280,6 +2291,32 @@
              currentPhishingQuestion = 0;
              showNextPhishingQuestion();
          };
+    });
+    
+    // PWA Service Worker Kaydı
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('sw.js')
+                .then(function(registration) {
+                    console.log('✅ PWA Service Worker kayıtlı:', registration.scope);
+                }, function(err) {
+                    console.log('❌ PWA Service Worker kayıt hatası:', err);
+                });
+        });
+    }
+    
+    // PWA Kurulum Banner
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        
+        // Kurulum butonunu göster (isteğe bağlı)
+        console.log('📱 Uygulama kurulabilir! Kullanıcı "Ana Ekrana Ekle" seçeneğini görebilir.');
+    });
+    
+    window.addEventListener('appinstalled', (evt) => {
+        console.log('🎉 Siber Macera uygulaması başarıyla kuruldu!');
     });
     </script>
 </body>
